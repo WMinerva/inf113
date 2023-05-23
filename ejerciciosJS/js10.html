@@ -1,0 +1,60 @@
+<head>
+  <script>
+    function invertirCadena(cadena) {
+      return cadena.split("").reverse().join("");
+      let cadenaOriginal = prompt("INgrese cadena a invertir:");
+      let cadenaInvertida = invertirCadena(cadenaOriginal);
+      document.write(cadenaOriginal, "<br>");
+      document.write(cadenaInvertida);
+    }
+    function areaTriangulo(b, h) {
+      area = (b * h) / 2;
+      return area;
+      let b = parseInt(prompt("Ingrese base del Triangulo: "));
+      let h = parseInt(prompt("Ingrese altura del Triangulo: "));
+      document.write("El area es:", "en mts");
+      document.write(areaTriangulo(b, h));
+    }
+    function validarContraseña(contraseña) {
+      let n = contraseña.length;
+      if (n >= 8) {
+        alert("Contraseña valida");
+      } else {
+        alert("Contraseña invalida");
+      }
+      let contraseña = prompt("Ingrese contraseña:");
+      validarContraseña(contraseña);
+    }
+  </script>
+</head>
+<body>
+    <script>
+        
+		var opcion=0, flag=true;
+		while(flag){
+            opcion = parseInt(prompt("PROGRAMA MENÚ:\nSeleccione una opción\n1. Inversion\n2. Area de Triangulo\n3. Validar contraseña\n4. Salir"))
+			switch(opcion) {
+				case 1:
+					var num = parseInt(prompt("Cantidad de Números:"));
+					promedio(num);
+					break;
+				case 2:
+					var num = parseInt(prompt("Cantidad de Números:"));
+					fibonacci(num);
+					break;
+				case 3:
+					var num = parseInt(prompt("Cantidad de Números:"));
+					factoria(num);
+					break;
+				case 4:
+                    flag=false;
+					break;
+				default:
+					alert("Opción inválida");
+					break;
+
+        }
+    }
+
+    </script>
+</body>

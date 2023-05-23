@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script>
+		let n = parseInt(prompt("Ingresa un numero: "));
+		let cn = n;
+		let sd = 0;
+		while (cn != 0) {
+			d = cn % 10;
+			cn = Math.trunc(cn / 10);
+			sd = sd + d;
+		}
+		alert(`La suma de los digitos de ${n} es ${sd}.`);
+	</script>
+
+</head>
+<body>
+
+</body>
+</html>
