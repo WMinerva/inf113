@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lanzamiento de Dados</title>
+    <script>
+        function lanzarDados() {
+            var sumas = []; // Array para almacenar el número de apariciones de cada suma
+            
+            // Lanzar los dados 1000 veces
+            for (var i = 0; i < 1000; i++) {
+                var dado1 = Math.floor(Math.random() * 6) + 1; // Número aleatorio entre 1 y 6 para el primer dado
+                var dado2 = Math.floor(Math.random() * 6) + 1; // Número aleatorio entre 1 y 6 para el segundo dado
+                var suma = dado1 + dado2; // Sumar los resultados de los dos dados
+
+                if (sumas[suma]) {
+                    sumas[suma]++; // Incrementar el contador de la suma si ya existe en el array
+                } else {
+                    sumas[suma] = 1; // Inicializar el contador de la suma si es la primera aparición
+                }
+            }
+
+            // Mostrar los resultados en la página
+            var resultados = document.getElementById("resultados");
+            for (var j = 2; j <= 12; j++) {
+                var resultado = document.createElement("p");
+                resultado.innerHTML = "Suma " + j + ": " + (sumas[j] || 0) + " apariciones";
+                resultados.appendChild(resultado);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Lanzamiento de Dados</h1>
+    <button onclick="lanzarDados()">Lanzar Dados</button>
+    <div id="resultados"></div>
+</body>
+</html>
