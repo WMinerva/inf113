@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Validar</title>
+    <script>
+        function validarContra(){
+            let contra = document.forms["miForm"]["contra"].value;
+            if(contra.length <= 7){
+                alert("Contraseña invalida");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Formulario</h1>
+    <form name="miForm" onsubmit="return validarContra()"  method="post">
+        <label for="contra">Ingrese contraseña:</label>
+        <input type="password" id="contra" name="contra"><br>
+        <input type="submit" value="Enviar"/>
+    </form>
+    
+</body>
+</html>
